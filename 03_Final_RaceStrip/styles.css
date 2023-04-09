@@ -1,0 +1,27 @@
+@font-face {
+  font-family: Vox;
+  src: url(https://use.typekit.net/cqj0kcn.css);
+  font-weight: bold;
+}
+body{
+font-family:Vox, bold;
+overflow:none;
+background-color:black;
+}
+
+.contain{
+  display:flex;
+  margin:auto;
+  margin-top:auto;
+  background-color:black;
+  margin:auto;
+  padding: 0;
+
+}
+
+
+#text{
+  text-align:center;
+  color:tomato;
+  font-size:30em;
+}
