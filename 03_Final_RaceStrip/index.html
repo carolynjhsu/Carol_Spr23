@@ -1,53 +1,239 @@
 <!doctype html>
 
 <html lang="en">
+
 <head>
-  <link rel="stylesheet" href="https://use.typekit.net/cqj0kcn.css">
+  <link rel="stylesheet" type="text/css" href="https://use.typekit.net/cqj0kcn.css">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>timer</title>
   <meta name="author" content="carol">
-  <link rel="stylesheet" href="./styles.css">
-  <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
-  <script defer src="https://pyscript.net/latest/pyscript.js"></script>
-
   <style>
+    @font-face {
+      font-family: Vox;
+      src: url("https://use.typekit.net/cqj0kcn.css");
+      font-weight: bold;
+    }
 
-      @font-face {
-  font-family: Vox;
-  src: url(https://use.typekit.net/cqj0kcn.css);
-  font-weight: bold;
-}
-body{
-font-family:Vox, bold;
-overflow:none;
-background-color:black;
-width:100%;
-}
+    body {
+      font-family: Vox, bold;
+      overflow: none;
+      background-color: black;
+      width: 100%;
+    }
 
-.contain{
-  width:100%;
-  height:auto;
-  display:inline;
-  position:relative;
-  background-color:black;
-  margin:auto;
-  padding: 0;
+    .contain {
+      width: 100%;
+      height: auto;
+      display: inline;
+      position: relative;
+      background-color: black;
+      margin: auto;
+      padding: 0;
 
-}
+    }
 
+    .connect_contain {
+      position: absolute;
+      left: 10%;
+      top: 90%;
+      padding: 20px;
+    }
 
-#text{
-  text-align:center;
-  color:tomato;
-  font-size:30em;
-}
+    #text {
+      text-align:center;
+      color: tomato;
+      font-size: 15em;
+    }
+    #text2 {
+
+      text-align: center;
+      color: tomato;
+      font-size: 15em;
+    }
   </style>
 </head>
+
 <body>
-  <div class="contain">
-  <div id="text">GO!</div>
-  </div>
+    <div class="connect_contain">
+      <button id="connect-button" type="button">🔌 Connect</button>
+    </div>
+   <div id="text">READY</div>
+
+
+
+    <script>
+
+      const connectButton = document.getElementById('connect-button');
+
+
+      let reader;
+
+      let readableStreamClosed;
+
+      let writer;
+
+      let writableStreamClosed;
+
+
+
+      async function getReader() {
+
+        port = await navigator.serial.requestPort({});
+
+        await port.open({
+          baudRate:
+            115200
+        });
+
+        console.log(port);
+
+        console.log(port.getInfo());
+
+        connectButton.innerText = '🔌 Disconnect';
+
+
+        const textDecoder =
+          new TextDecoderStream();
+
+        readableStreamClosed = port.readable.pipeTo(textDecoder.writable);
+
+        reader = textDecoder.readable
+
+          .pipeThrough(new TransformStream(new LineBreakTransformer()))
+
+          .getReader();
+
+
+
+        while (true) {
+
+          const { value, done } =
+            await reader.read();
+
+          if (done) {
+
+            reader.releaseLock();
+
+            break;
+
+          }
+
+          if (value) {
+
+            console.log('received.. ' + value);
+
+            const textElement = document.getElementById("text");
+
+            textElement.textContent = value;
+
+
+          }
+        }
+
+      }
+
+
+      class LineBreakTransformer {
+
+        constructor() {
+
+          // A container for holding stream data g stream data until a new line.
+
+          this.chunks =
+            "";
+
+        }
+
+
+
+        transform(chunk, controller) {
+
+          // Append new chunks to existing chunks.
+
+          this.chunks += chunk;
+
+          // For each line breaks in chunks, send the parsed lines out.
+
+          const lines =
+            this.chunks.split("\r\n");
+
+          this.chunks = lines.pop();
+
+          lines.forEach(line => controller.enqueue(line));
+
+          console.debug(
+
+            `[LineBreakTransformer/transform] this.chunks:
+${this.chunks}`
+
+          );
+
+        }
+
+
+
+        flush(controller) {
+
+          console.log("flush",
+            this.chunks);
+
+          // When the stream is closed, flush any remaining chunks out.
+
+          controller.enqueue(this.chunks);
+
+        }
+
+      }
+
+
+      let port;
+
+      if ('serial'
+        in navigator) {
+
+        connectButton.addEventListener('click',
+          async function () {
+
+            if (port) {
+
+
+              try {
+
+                reader.cancel().catch(error => console.log(error));
+
+                await readableStreamClosed.catch(()=> { });
+
+              } catch (error) {
+
+                console.log(error);
+
+              } finally {
+
+                await port.close();
+
+                console.log('close port..');
+
+                port = undefined;
+
+                connectButton.innerText = '🔌 Connect';
+
+              }
+
+            }
+
+            else {
+
+              getReader();
+
+            }
+
+          });
+
+      }
+
+    </script>
 </body>
+
 </html>
