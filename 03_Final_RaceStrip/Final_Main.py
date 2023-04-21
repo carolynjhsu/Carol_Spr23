@@ -59,17 +59,14 @@ while True:
             program_state="racing"
     if(program_state=="racing"):
         # print("Start racing")
-        lane_val1 = sensor1.read()
+        lane_val1 = sensor1.read() #start reading values for sensor to prepare for race end
         lane_val2 = sensor2.read()
-        # print(lane_val1)
         print(lane_val2)
         if(lane_val1<1500):
             end_time_1 = ticks_ms()
-            print("line1 F")
             lane1_finished = True
         elif(lane_val2<1500):
             end_time_2 = ticks_ms()
-            print("line2 F")
             lane2_finished = True
             # print("lane 2")
         if (lane1_finished and lane2_finished):
