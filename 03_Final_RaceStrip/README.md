@@ -100,7 +100,9 @@ Use a web serial port to connect to a styled local page displaying countdown mar
 
 Unforunately I did not get to rerecord the demo as the laser cut arm on the servo broke off. I was not able to put it back together in such short notice, but I do have a recording of the in class demo. 
 
-![demo](https://github.com/carolynjhsu/Carol_Spr23/blob/main/03_Final_RaceStrip/Photos/prototype_simulation.MOV)  
+(Can view this in the "photos" folder under "inclass_demo)
+
+![demo](https://github.com/carolynjhsu/Carol_Spr23/blob/main/03_Final_RaceStrip/Photos/inclass_demo.mp4)  
 
 
   
