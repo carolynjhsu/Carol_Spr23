@@ -21,7 +21,8 @@ I wanted to make a hot wheels based derby racetrack. Includes a servo operated s
 
 ### Software
 
-Countdown details
+Countdown details  
+
 ```if(program_state=="start"): 
         if(start_pin.value()==0): #push button to start racing 
             countdown(3) #call function countdown to start the countdown before race starts
@@ -29,7 +30,8 @@ Countdown details
             start_time_2 = ticks_ms() #after countdown is initialized, start storing time elapsed in 2 variables for 2 separate lanes
 ```
 
-Read values for sensor 1 and sensor 2
+Read values for sensor 1 and sensor 2  
+
 
         ```lane_val1 = sensor1.read() #start reading values for sensor to prepare for race end
         lane_val2 = sensor2.read()
@@ -60,7 +62,7 @@ Then, find proper threshold to activate sensor when dark.
 
 
           }
-          ````
+````
                 
 
 ### Enclosure
