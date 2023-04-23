@@ -102,7 +102,7 @@ Unforunately I did not get to rerecord the demo as the laser cut arm on the serv
 
 (Can view this in the "photos" folder under "inclass_demo)
 
-![demo](https://github.com/carolynjhsu/Carol_Spr23/blob/main/03_Final_RaceStrip/Photos/inclass_demo.mp4)  
+[demo](https://github.com/carolynjhsu/Carol_Spr23/blob/main/03_Final_RaceStrip/Photos/inclass_demo.mp4)  
 
 
   
@@ -122,9 +122,12 @@ With the skills and knowledge that I've accumulated in this class, I've been abl
  
 
 Countdown Timer Reference
-[Countdown Timer Ref](https://www.geeksforgeeks.org/how-to-create-a-countdown-timer-using-python/)
+[Countdown Timer Ref](https://www.geeksforgeeks.org/how-to-create-a-countdown-timer-using-python/)  
+
 Time Documentation for MicroPython
-[Micropython_Time_Ref](https://docs.micropython.org/en/latest/library/time.html)
-[Arduino_Hot_Wheels_Track](https://blog.arduino.cc/2016/12/20/dad-builds-an-arduino-hot-wheels-drag-strip-for-son/)
+[Micropython_Time_Ref](https://docs.micropython.org/en/latest/library/time.html)  
+
+[Arduino_Hot_Wheels_Track](https://blog.arduino.cc/2016/12/20/dad-builds-an-arduino-hot-wheels-drag-strip-for-son/)  
+
 
  I would have never thought to use a web serial port to connect my script to an externally styled page, simply because I did not come across that on the internet. Though there are a wealth of resources online, thank you to my advisor and to our TA for being a great source of help. 
