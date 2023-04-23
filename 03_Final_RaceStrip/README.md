@@ -68,30 +68,42 @@ Web serial port connection to styled ID class
 
 ### Enclosure
 
-Basic Wiring details for enclosure. Used tabs and push pins in cardboard to easily take out atom matrix and rewire as necessary. 
+Basic Wiring details for enclosure. Used tabs and push pins in cardboard to easily take out atom matrix and rewire as necessary.  
+
 
 ![placement_atom](https://github.com/carolynjhsu/Carol_Spr23/blob/main/03_Final_RaceStrip/Photos/placement.jpg)
-![wiring](https://github.com/carolynjhsu/Carol_Spr23/blob/main/03_Final_RaceStrip/Photos/wires.jpg)
+![wiring](https://github.com/carolynjhsu/Carol_Spr23/blob/main/03_Final_RaceStrip/Photos/wires.jpg)  
 
-Attached hinge plate to blocks of cardboard, attached metal dowels sandwiched inbetween to hold up cars. The dowels were a bit too short so I removed some layers of cardboard and added some hot glue gun dots on top to add height. 
-![hinge](https://github.com/carolynjhsu/Carol_Spr23/blob/main/03_Final_RaceStrip/Photos/hinge.jpg)
+
+
+Attached hinge plate to blocks of cardboard, attached metal dowels sandwiched inbetween to hold up cars. The dowels were a bit too short so I removed some layers of cardboard and added some hot glue gun dots on top to add height.   
+
+![hinge](https://github.com/carolynjhsu/Carol_Spr23/blob/main/03_Final_RaceStrip/Photos/hinge.jpg)  
+
+
 
 Sensors fit snugly in predrilled holes in the tracks. Fit them through the slots to lay flat enough for cars to roll over/against. 
 
-![sensors](https://github.com/carolynjhsu/Carol_Spr23/blob/main/03_Final_RaceStrip/Photos/sensors.jpeg)
+![sensors](https://github.com/carolynjhsu/Carol_Spr23/blob/main/03_Final_RaceStrip/Photos/sensors.jpeg)  
+
+
 
 ### Integrations
 
-Use a web serial port to connect to a styled local page displaying countdown markers. In order to connect to the port, I have to first connect it via Pymakr in VS Code and then kill both the terminal and the connection to the port.
+Use a web serial port to connect to a styled local page displaying countdown markers. In order to connect to the port, I have to first connect it via Pymakr in VS Code and then kill both the terminal and the connection to the port.  
 
-![Ready_Example](https://github.com/carolynjhsu/Carol_Spr23/blob/main/03_Final_RaceStrip/Photos/Ready.png)
+![Ready_Example](https://github.com/carolynjhsu/Carol_Spr23/blob/main/03_Final_RaceStrip/Photos/Ready.png)  
+
+
 
 ### Project Demo
 
 Unforunately I did not get to rerecord the demo as the laser cut arm on the servo broke off. I was not able to put it back together in such short notice, but I do have a recording of the in class demo. 
 
-![demo](https://github.com/carolynjhsu/Carol_Spr23/blob/main/03_Final_RaceStrip/Photos/prototype_simulation.MOV)
+![demo](https://github.com/carolynjhsu/Carol_Spr23/blob/main/03_Final_RaceStrip/Photos/prototype_simulation.MOV)  
 
+
+  
 ### Final Thoughts
 
 Overall, Though I had a few kinks with the prototyping process, I'm happy with how it turned out. Mechanical components were never something I was comfortable with, and though there is still a lot to learn, I've been able to gain a lot more confidence in this regard. I felt quite proud seeing my code work in real time, even if it did not perfectly execute during the final. 
@@ -101,7 +113,6 @@ Mechanical components are tricky in that there is no straightforward way to "deb
 Moving forward I would love to refine the actual prototype, utilizing cardboard laser cut outs once measurements are finalized and figuring out a more stable way to attach the servo in place (this is part of the "physical" prototyping process that I'm less privy to–making things work together in a mechanically elegant way as opposed to just tacking them onto a board. I'm not used to visualizing in that kind of environment, so that would be a good place to move forward with.)
 
 With the skills and knowledge that I've accumulated in this class, I've been able to conquer something that I've been intimidated, but intrigued by, for years. 
-
 
 
 
