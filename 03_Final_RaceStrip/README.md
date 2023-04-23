@@ -51,10 +51,11 @@ I wanted to make a hot wheels based derby racetrack. Includes a servo operated s
 
 Basic Wiring details for enclosure. Used tabs and push pins in cardboard to easily take out atom matrix and rewire as necessary. 
 
-![wiring](https://github.com/carolynjhsu/Carol_Spr23/blob/main/03_Final_RaceStrip/Photos/wire_placement.HEIC)
+![placement_atom](https://github.com/carolynjhsu/Carol_Spr23/blob/main/03_Final_RaceStrip/Photos/placement.jpg)
+![wiring](https://github.com/carolynjhsu/Carol_Spr23/blob/main/03_Final_RaceStrip/Photos/wires.jpg)
 
 Attached hinge plate to blocks of cardboard, attached metal dowels sandwiched inbetween to hold up cars. The dowels were a bit too short so I removed some layers of cardboard and added some hot glue gun dots on top to add height. 
-![hinge](https://github.com/carolynjhsu/Carol_Spr23/blob/main/03_Final_RaceStrip/Photos/hinge_plate.HEIC)
+![hinge](https://github.com/carolynjhsu/Carol_Spr23/blob/main/03_Final_RaceStrip/Photos/hinge.jpg)
 
 Sensors fit snugly in predrilled holes in the tracks. Fit them through the slots to lay flat enough for cars to roll over/against. 
 
