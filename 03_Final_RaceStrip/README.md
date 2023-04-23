@@ -62,15 +62,36 @@ Sensors fit snugly in predrilled holes in the tracks. Fit them through the slots
 
 ### Integrations
 
-Use a web serial port to connect to a styled local page displaying countdown markers. In order to connect to the port, I have to first connect it via Pymakr in VS Code and then kill both the terminal and the connection to the atom matrix, and then pair the atom matrix to age via the port. 
+Use a web serial port to connect to a styled local page displaying countdown markers. In order to connect to the port, I have to first connect it via Pymakr in VS Code and then kill both the terminal and the connection to the port.
+
+![Ready_Example](https://github.com/carolynjhsu/Carol_Spr23/blob/main/03_Final_RaceStrip/Photos/Ready.png)
 
 ### Project Demo
 
+Unforunately I did not get to rerecord the demo as the laser cut arm on the servo broke off. I was not able to put it back together in such short notice, but I do have a recording of the in class demo. 
 
 ![demo](https://github.com/carolynjhsu/Carol_Spr23/blob/main/03_Final_RaceStrip/Photos/prototype_simulation.MOV)
 
+### Final Thoughts
+
+Overall, Though I had a few kinks with the prototyping process, I'm happy with how it turned out. Mechanical components were never something I was comfortable with, and though there is still a lot to learn, I've been able to gain a lot more confidence in this regard. I felt quite proud seeing my code work in real time, even if it did not perfectly execute during the final. 
+
+Mechanical components are tricky in that there is no straightforward way to "debug" them–there were time when I had no idea how to move forward, since the issue at hand was not something I was ever familiar with (such as with the sensors and servo not working reliably. It's so easy to make a wrong connection and potentially ruin everything. It's a little more difficult to do that in code, so that was definitely a learning curve for me.)
+
+Moving forward I would love to refine the actual prototype, utilizing cardboard laser cut outs once measurements are finalized and figuring out a more stable way to attach the servo in place (this is part of the "physical" prototyping process that I'm less privy to–making things work together in a mechanically elegant way as opposed to just tacking them onto a board. I'm not used to visualizing in that kind of environment, so that would be a good place to move forward with.)
+
+With the skills and knowledge that I've accumulated in this class, I've been able to conquer something that I've been intimidated, but intrigued by, for years. 
+
+
+
 
 ### References
+ 
 
 Countdown Timer Reference
-![Countdown Timer Ref](https://www.geeksforgeeks.org/how-to-create-a-countdown-timer-using-python/)
+[Countdown Timer Ref](https://www.geeksforgeeks.org/how-to-create-a-countdown-timer-using-python/)
+Time Documentation for MicroPython
+[Micropython_Time_Ref](https://docs.micropython.org/en/latest/library/time.html)
+[Arduino_Hot_Wheels_Track](https://blog.arduino.cc/2016/12/20/dad-builds-an-arduino-hot-wheels-drag-strip-for-son/)
+
+ I would have never thought to use a web serial port to connect my script to an externally styled page, simply because I did not come across that on the internet. Though there are a wealth of resources online, thank you to my advisor and to our TA for being a great source of help. 
