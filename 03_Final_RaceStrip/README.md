@@ -15,7 +15,7 @@ I wanted to make a hot wheels based derby racetrack. Includes a servo operated s
     -Control hinge plate that drops upon game start, moves back to start position after cars are deployed
 -Light Dependent Resistor (LDR)
     -Used to sense when cars have moved past the sensor, signalling race end. 
-![schematic](https://github.com/carolynjhsu/Carol_Spr23/blob/main/03_Final_RaceStrip/Photos/schematic.heic)
+![schematic](https://github.com/carolynjhsu/Carol_Spr23/blob/main/03_Final_RaceStrip/Photos/schematic.jpg)
 
 
 
@@ -45,6 +45,19 @@ I wanted to make a hot wheels based derby racetrack. Includes a servo operated s
                 time_lapsed_1 = end_time_1 - start_time_1
                 time_lapsed_2 = end_time_2 - start_time_2
         ```
+````
+#web serial port connection to styled ID class
+          if (value) {
+
+            console.log('received.. ' + value);
+
+            const textElement = document.getElementById("text");
+
+            textElement.textContent = value;
+
+
+          }
+          ````
                 
 
 ### Enclosure
@@ -59,7 +72,7 @@ Attached hinge plate to blocks of cardboard, attached metal dowels sandwiched in
 
 Sensors fit snugly in predrilled holes in the tracks. Fit them through the slots to lay flat enough for cars to roll over/against. 
 
-![sensors](https://github.com/carolynjhsu/Carol_Spr23/blob/main/03_Final_RaceStrip/Photos/sensors.HEIC)
+![sensors](https://github.com/carolynjhsu/Carol_Spr23/blob/main/03_Final_RaceStrip/Photos/sensors.jpeg)
 
 ### Integrations
 
