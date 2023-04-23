@@ -50,8 +50,9 @@ Then, find proper threshold to activate sensor when dark.
                 time_lapsed_1 = end_time_1 - start_time_1
                 time_lapsed_2 = end_time_2 - start_time_2
         ```
+Web serial port connection to styled ID class
+
 ````
-#web serial port connection to styled ID class
           if (value) {
 
             console.log('received.. ' + value);
